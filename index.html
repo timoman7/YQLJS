@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>YQL</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="./js/YQLJS.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <template id="param">
+      <tr class="param">
+        <td>
+          <input type="text" placeholder="key" class="key">
+        </td>
+        <td>
+          <input type="text" placeholder="value" class="value">
+        </td>
+        <td>
+          <button onclick="removeParam(this)" class="btn remBtn">-</button>
+        </td>
+      </tr>
+    </template>
+    <div id="inputHolder">
+      <input id="query" placeholder="Query text">
+      <table id="params">
+        <tr>
+          <th>Key</th><th>Value</th><th class='useBGColor hidden remBtn'>-</th>
+        </tr>
+      </table>
+      <button id="addParamBtn" class="btn addBtn">+</button>
+      <button id="submitBtn" class="btn cmdBtn">Query</button>
+      <button id="debugBtn" class="btn cmdBtn">Debug</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <script src="./js/main.js" charset="utf-8"></script>
+  </body>
+</html>

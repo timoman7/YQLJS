@@ -1,0 +1,49 @@
+body{
+  margin: 0px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  height: 100%;
+}
+.useBGColor{
+  background: rgb(255,255,255);
+}
+.useBGColor, .hidden{
+  background: rgb(255,255,255);
+  color: rgb(255,255,255);
+}
+input{
+  border: 0.15em rgba(27, 10, 134, 0.58) solid;
+  font: 1.2em "Courier New", serif;
+}
+#query{
+  border: 0.15em rgba(27, 10, 134, 0.58) solid;
+  font: 1.2em "Courier New", serif;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+#inputHolder{
+  width: 98%;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+}
+#params{
+  padding: 0px 0px 0px 0px;
+  margin: 5px 0px 5px 0px;
+  width: 57%;
+  border: 0.1em rgba(40,40,40,0.8) solid;
+}
+.param input{
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border-collapse:collapse;
+}
+.remBtn{
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+  font: 2em "Courier New", serif;
+}
+#output{
+  border: 0.1em rgba(40,40,40,0.8) solid;
+  width: 99%;
+  height: 100%;
+}

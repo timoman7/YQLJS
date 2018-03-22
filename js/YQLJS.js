@@ -129,8 +129,12 @@ function YQLQuery(query, params, options){
 }
 async function YQL(query, params){
   console.log(query, params)
-  let response = await YQLQuery(query, params);
+  let _query = query;
+  if(!query.toLowerCase().includes(' where ')){
+    _query += ' where';
+  }
+  let response = await YQLQuery(_query, params);
   let responseData = response.query;
-  let responseType = checkType(query);
+  let responseType = checkType(_query);
   return [responseData, responseType];
 }

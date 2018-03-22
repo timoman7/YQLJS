@@ -16,8 +16,15 @@ function removeParam(e){
     paramsHolder.appendChild(newParam);
   }
   function parseParams(el){
-    console.log(el)
     let allParams = {};
+    let paramsDOM = el.getElementsByClassName('param');
+    for(let ind = 0; ind < paramsDOM.length; ind++){
+      let kvSet = paramsDOM.item(ind);
+      let key = kvSet.getElementsByClassName('key')[0].value;
+      let val = kvSet.getElementsByClassName('value')[0].value;
+      allParams[key] = val;
+    }
+    console.log(allParams)
     return allParams;
   }
   function responseStringify(data, mode){
@@ -35,7 +42,7 @@ function removeParam(e){
     console.log(data,format)
     if(mode == "normal"){
       if(format == 'json'){
-        output.innerHTML = `${_header}<br>${responseStringify(data, mode)}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
+        output.innerHTML = `${_header}<br><pre>${responseStringify(data, mode)}<br>${format}</pre>${_footer!=undefined?'<br>'+_footer:''}`;
       }else if(format == 'html'){
         output.innerHTML = `${_header}<br>${data.results.result}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
       }

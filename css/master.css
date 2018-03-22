@@ -28,15 +28,23 @@ input{
 #params{
   padding: 0px 0px 0px 0px;
   margin: 5px 0px 5px 0px;
-  width: 57%;
+  width: 100%;
   border: 0.1em rgba(40,40,40,0.8) solid;
 }
 .param input{
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+  width: 95%;
+  text-align:center;
   border-collapse:collapse;
 }
 .remBtn{
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+  font: 2em "Courier New", serif;
+}
+.btn{
   border-top: 0px;
   border-bottom: 0px;
   padding: 0px 0px 0px 0px;
@@ -46,4 +54,8 @@ input{
   border: 0.1em rgba(40,40,40,0.8) solid;
   width: 99%;
   height: 100%;
+}
+#toolbar{
+  text-align: center;
+  width: 100%;
 }

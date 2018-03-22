@@ -19,7 +19,7 @@
           <input type="text" placeholder="value" class="value">
         </td>
         <td>
-          <button onclick="removeParam(this)" class="btn remBtn">-</button>
+          <button onclick="removeParam(this)" class="btn remBtn" title="Remove parameter">-</button>
         </td>
       </tr>
     </template>
@@ -30,9 +30,11 @@
           <th>Key</th><th>Value</th><th class='useBGColor hidden remBtn'>-</th>
         </tr>
       </table>
-      <button id="addParamBtn" class="btn addBtn">+</button>
-      <button id="submitBtn" class="btn cmdBtn">Query</button>
-      <button id="debugBtn" class="btn cmdBtn">Debug</button>
+      <div id="toolbar">
+        <button id="addParamBtn" class="btn addBtn" title="Add parameter">+</button>
+        <button id="submitBtn" class="btn cmdBtn">Query</button>
+        <button id="debugBtn" class="btn cmdBtn">Debug</button>
+      </div>
     </div>
     <div id="output">
 

@@ -33,10 +33,14 @@ function removeParam(e){
   }
   function displayOutput(mode, _header, data, format, _footer){
     console.log(data,format)
-    if(format == 'json'){
+    if(mode == "normal"){
+      if(format == 'json'){
+        output.innerHTML = `${_header}<br>${responseStringify(data, mode)}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
+      }else if(format == 'html'){
+        output.innerHTML = `${_header}<br>${data.results.result}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
+      }
+    }else if(mode == 'debug'){
       output.innerHTML = `${_header}<br>${responseStringify(data, mode)}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
-    }else if(format == 'html'){
-      output.innerHTML = `${_header}<br>${data.results.result}<br>${format}${_footer!=undefined?'<br>'+_footer:''}`;
     }
   }
   addParamBtn.addEventListener('click', function(){
